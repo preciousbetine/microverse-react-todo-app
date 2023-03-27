@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import TodoApp from '@/components/TodoApp';
+import TodoApp from '@/components/TodoApp.jsx';
 import '@/styles/app.scss';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
