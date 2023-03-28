@@ -1,7 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import TodoApp from '@/components/TodoApp.jsx';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import TodoApp from '@/components/TodoApp.jsx';
 import '@/styles/app.scss';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -10,4 +10,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <TodoApp />
     </BrowserRouter>
   </React.StrictMode>,
-)
+);
