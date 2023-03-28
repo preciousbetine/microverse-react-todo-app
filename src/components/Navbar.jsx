@@ -99,12 +99,6 @@ const Navbar = () => {
               )}
             </React.Fragment>
           ))}
-          {user && (
-            <div className="logout">
-              <p>{user}</p>
-              <button type="button" onClick={handleLogout}>Logout</button>
-            </div>
-          )}
 
           {!user && (
             <li className="log-in">
@@ -113,6 +107,13 @@ const Navbar = () => {
           )}
         </ul>
       </nav>
+
+      {user && (
+        <div className="logout">
+          <p>{user}</p>
+          <button type="button" onClick={handleLogout}>Logout</button>
+        </div>
+      )}
     </>
   );
 };

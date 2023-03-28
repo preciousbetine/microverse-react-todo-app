@@ -1,5 +1,4 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 import {
   useState,
   useEffect,
@@ -57,7 +56,7 @@ export const TodosProvider = ({ children }) => {
     setTodos(
       todos.map((todo) => {
         if (todo.id === id) {
-          todo.title = updatedTitle;
+          return { ...todo, title: updatedTitle };
         }
         return todo;
       }),
@@ -77,4 +76,9 @@ export const TodosProvider = ({ children }) => {
     </TodosContext.Provider>
   );
 };
+
+TodosProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 export const useTodosContext = () => useContext(TodosContext);

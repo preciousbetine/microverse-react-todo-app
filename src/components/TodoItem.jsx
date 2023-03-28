@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 import { useState, useRef } from 'react';
 import { FaTrash } from 'react-icons/fa';
 import { AiFillEdit } from 'react-icons/ai';
@@ -72,4 +72,13 @@ const TodoItem = ({ itemProp }) => {
     </li>
   );
 };
+
+TodoItem.propTypes = {
+  itemProp: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+  }).isRequired,
+};
+
 export default TodoItem;
