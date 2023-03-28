@@ -1,9 +1,12 @@
 import { useState } from 'react';
-import { FaPlusCircle } from "react-icons/fa"
+import { useTodosContext } from '@/context/TodosContext';
+import { FaPlusCircle } from 'react-icons/fa';
 
-const InputTodo = ({ addTodoItem }) => {
+const InputTodo = () => {
   const [title, setTitle] = useState('');
   const [message, setMessage] = useState('');
+
+  const { addTodoItem } = useTodosContext();
 
   const handleChange = (e) => {
     setTitle(e.target.value);
@@ -31,7 +34,13 @@ const InputTodo = ({ addTodoItem }) => {
           className="input-text"
         />
         <button className="input-submit">
-          <FaPlusCircle />
+          <FaPlusCircle
+            style={{
+              color: '#5e5e5e',
+              fontSize: '20px',
+              marginTop: '2px',
+            }}
+          />
         </button>
       </form>
       <span className="submit-warning">{message}</span>
