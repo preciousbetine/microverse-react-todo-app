@@ -1,8 +1,6 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="public/images/math.jpeg" alt="logo" width="140"  height="auto" style="border-radius:30px;" />
-
   <h1><b>Todo List</b></h1>
 
 </div>
