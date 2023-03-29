@@ -72,8 +72,7 @@ A simple todo list website with user authentication.
 
 <!-- > Add a link to your deployed project. -->
 
-<!-- - [Live Demo Link](https://preciousbetine.github.io/microverse-javascript-capstone/dist) -->
-- No Live Demo yet
+- [Live Demo Link](https://microverse-react-todo-app.vercel.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
