@@ -39,7 +39,7 @@ A simple todo list website with user authentication.
 ### Tech Stack <a name="tech-stack"></a>
 
 - React JS
-- SCSS
+- CSS
 
 <!-- <details>
   <summary>Server</summary>
@@ -157,7 +157,7 @@ Example:
 👤 **Precious Betine**
 
 - GitHub: [@preciousbetine](https://github.com/preciousbetine)
-- Twitter: [@preciousbetine](https://twitter.com/preciousbetine)
+- Twitter: [@preciousbetine](https://twitter.com/preciousbetin)
 - LinkedIn: [preciousbetine](https://linkedin.com/in/preciousbetine)
 
 <!-- 👤 **Hermon Gebre**
