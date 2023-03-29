@@ -1,17 +1,17 @@
 import { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-
-import styles from '@/styles/Login.module.scss';
+import {
+  useNavigate,
+  useLocation,
+} from 'react-router-dom';
 import { useAuthContext } from '@/context/AuthContext';
 import Header from '@/components/Header';
+import styles from '@/styles/Login.module.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const { login } = useAuthContext();
-
   const navigate = useNavigate();
   const location = useLocation();
-
   const from = location.state?.pathname || '/';
 
   const handleSubmit = (e) => {
@@ -21,7 +21,6 @@ const Login = () => {
     setUsername('');
     navigate(from, { replace: true });
   };
-
   return (
     <div>
       <Header>
@@ -41,5 +40,4 @@ const Login = () => {
     </div>
   );
 };
-
 export default Login;
