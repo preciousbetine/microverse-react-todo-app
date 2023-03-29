@@ -39,7 +39,7 @@ A simple todo list website with user authentication.
 ### Tech Stack <a name="tech-stack"></a>
 
 - React JS
-- SCSS
+- CSS
 
 <!-- <details>
   <summary>Server</summary>
@@ -72,8 +72,7 @@ A simple todo list website with user authentication.
 
 <!-- > Add a link to your deployed project. -->
 
-<!-- - [Live Demo Link](https://preciousbetine.github.io/microverse-javascript-capstone/dist) -->
-- No Live Demo yet
+- [Live Demo Link](https://microverse-react-todo-app.vercel.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -157,7 +156,7 @@ Example:
 👤 **Precious Betine**
 
 - GitHub: [@preciousbetine](https://github.com/preciousbetine)
-- Twitter: [@preciousbetine](https://twitter.com/preciousbetine)
+- Twitter: [@preciousbetine](https://twitter.com/preciousbetin)
 - LinkedIn: [preciousbetine](https://linkedin.com/in/preciousbetine)
 
 <!-- 👤 **Hermon Gebre**
