@@ -26,4 +26,5 @@ const SinglePage = () => {
     </div>
   );
 };
+
 export default SinglePage;

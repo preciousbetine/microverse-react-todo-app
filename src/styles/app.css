@@ -67,12 +67,6 @@ body {
   display: block;
 }
 
-.input-submit svg {
-  color: #5e5e5e;
-  font-size: 20px;
-  margin-top: 2px;
-}
-
 a {
   color: #333;
   text-decoration: none;
@@ -102,8 +96,8 @@ About route
   font-weight: bold;
 }
 
-// placing this here bcos of stylelint error
-.menu-nav li a {
+.menu-nav li a,
+.menu-nav li span {
   display: block;
   padding: 1rem;
 }
@@ -169,11 +163,6 @@ button {
 .menu-nav.show-menu {
   width: 100%;
   transform: translateX(0);
-}
-
-.menu-nav li span {
-  display: block;
-  padding: 1rem;
 }
 
 .log-in {

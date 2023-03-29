@@ -2,18 +2,15 @@ import PropTypes from 'prop-types';
 import { useState, useRef } from 'react';
 import { FaTrash } from 'react-icons/fa';
 import { AiFillEdit } from 'react-icons/ai';
-import { useTodosContext } from '@/context/TodosContext';
 import { useAuthContext } from '@/context/AuthContext';
-import styles from '@/styles/TodoItem.module.scss';
+import styles from '@/styles/TodoItem.module.css';
 
-const TodoItem = ({ itemProp }) => {
-  const [editing, setEditing] = useState(false);
-
-  const { handleChange, delTodo, setUpdate } = useTodosContext();
+const TodoItem = ({
+  itemProp, handleChange, delTodo, setUpdate,
+}) => {
   const { user } = useAuthContext();
-
+  const [editing, setEditing] = useState(false);
   const editInputRef = useRef(null);
-
   const completedStyle = {
     fontStyle: 'italic',
     color: '#595959',
@@ -25,6 +22,13 @@ const TodoItem = ({ itemProp }) => {
     setEditing(true);
   };
 
+  const handleUpdatedDone = ({ key }) => {
+    if (key === 'Enter') {
+      setUpdate(editInputRef.current.value, itemProp.id);
+      setEditing(false);
+    }
+  };
+
   const viewMode = {};
   const editMode = {};
   if (editing) {
@@ -33,12 +37,6 @@ const TodoItem = ({ itemProp }) => {
     editMode.display = 'none';
   }
 
-  const handleUpdatedDone = (event) => {
-    if (event.key === 'Enter') {
-      setUpdate(editInputRef.current.value, itemProp.id);
-      setEditing(false);
-    }
-  };
   return (
     <li className={styles.item}>
       <div className={styles.content} style={viewMode}>
@@ -47,13 +45,13 @@ const TodoItem = ({ itemProp }) => {
           checked={itemProp.completed}
           onChange={() => handleChange(itemProp.id)}
         />
-        {user && (
-          <button type="button" onClick={handleEditing}>
-            <AiFillEdit
-              style={{ color: '#5e5e5e', fontSize: '16px' }}
-            />
-          </button>
-        )}
+        {
+          user && (
+            <button type="button" onClick={handleEditing}>
+              <AiFillEdit style={{ color: '#5e5e5e', fontSize: '16px' }} />
+            </button>
+          )
+        }
         <button type="button" onClick={() => delTodo(itemProp.id)}>
           <FaTrash style={{ color: '#5e5e5e', fontSize: '16px' }} />
         </button>
@@ -79,6 +77,9 @@ TodoItem.propTypes = {
     title: PropTypes.string.isRequired,
     completed: PropTypes.bool.isRequired,
   }).isRequired,
+  handleChange: PropTypes.func.isRequired,
+  delTodo: PropTypes.func.isRequired,
+  setUpdate: PropTypes.func.isRequired,
 };
 
 export default TodoItem;
